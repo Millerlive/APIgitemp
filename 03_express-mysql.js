@@ -3,18 +3,18 @@
 const mysql = require("mysql");
 const express = require("express");
 // 3.创建Mysql连接
-const connection = mysql.createConnection({
-  host: "localhost", //域名
-  user: "root", //用户名
-  password: "123456", //密码
-  database: "test",
-});
 // const connection = mysql.createConnection({
-//     host: 'bqsxjf2zgwcvnap1tuut-mysql.services.clever-cloud.com', //域名
-//     user: 'ujqvtqll8lirmdgr', //用户名
-//     password:'SP8d7lExEEq75G48gzik' , //密码
-//     database:'bqsxjf2zgwcvnap1tuut'
-// })
+//   host: "localhost", //域名
+//   user: "root", //用户名
+//   password: "123456", //密码
+//   database: "test",
+// });
+const connection = mysql.createConnection({
+    host: 'bqsxjf2zgwcvnap1tuut-mysql.services.clever-cloud.com', //域名
+    user: 'ujqvtqll8lirmdgr', //用户名
+    password:'SP8d7lExEEq75G48gzik' , //密码
+    database:'bqsxjf2zgwcvnap1tuut'
+})
 connection.connect((err) => {
   if (err) {
     console.log("error connecting", err.stack);
